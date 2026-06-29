@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Libre_Franklin } from "next/font/google";
-import { SiteHeader } from "@/components/layout/SiteHeader";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -18,9 +17,9 @@ const libreFranklin = Libre_Franklin({
 });
 
 export const metadata: Metadata = {
-  title: "Vega — Wedding & Portrait Photography",
+  title: "Vega — Photo portfolios & client delivery",
   description:
-    "Cinematic wedding and portrait photography. Quiet, editorial, emotionally intimate.",
+    "Portfolio builder and client delivery for photo students and photographers. Albums, picks, retouch, publish.",
 };
 
 export default function RootLayout({
@@ -40,8 +39,7 @@ export default function RootLayout({
         >
           Skip to content
         </a>
-        <SiteHeader />
-        <main id="main">{children}</main>
+        {children}
       </body>
     </html>
   );
